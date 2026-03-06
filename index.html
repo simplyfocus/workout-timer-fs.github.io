@@ -294,7 +294,6 @@ class Day {
 
     getALL() {
         let todos = [];
-
         if (this.getJumps()) todos.push(...this.getJumps());
         if (this.getPower()) todos.push(...this.getPower());
         if (this.getStrength()) todos.push(...this.getStrength());
@@ -329,6 +328,7 @@ const list = document.getElementById("workoutList");
 
 // ChatGPT: declare sound
 const alertSound = document.getElementById("alertSound");
+let SoundWasPlaying = false;
 // ChatGPT: unlock audio when user clicks the icon
 document.getElementById("audioUnlockBtn").addEventListener("click", () => {
     alertSound.play().then(() => {
@@ -379,18 +379,12 @@ class Timer {
 
     start() {
         if (this.interval) return;
+
         this.interval = setInterval(() => {
 
-
-            
-
-
-
             if (this.remaining === 11) {
-                alertSound.play()
+                alertSound.play().catch(()=>{});
             }
-
-
             if (this.remaining <= 0) {
                 this.pause();
                 if (typeof this.onFinish === 'function') {
@@ -401,12 +395,24 @@ class Timer {
             this.remaining -= 1;
             this.update();
         }, 1000);
+
+        // if sound was playing before, resume it when timer starts again
+        if (SoundWasPlaying) {
+            alertSound.play().catch(()=>{});
+            SoundWasPlaying = false;
+        }
     }
 
     pause() {
         if (this.interval) {
             clearInterval(this.interval);
             this.interval = null;
+        }
+        if (!alertSound.paused) {
+            SoundWasPlaying = true;
+            alertSound.pause();
+        } else {
+            SoundWasPlaying = false;
         }
     }
 
@@ -449,14 +455,7 @@ timer.onFinish = () => {
     }
 };
 
-startBtn.addEventListener('click', () => {timer.start();
-    // ChatGPT: unlock audio when user presses start
-                alertSound.play().then(() => {
-                    alertSound.pause();
-                    alertSound.currentTime = 0;
-                }).catch(() => {});
-
-});
+startBtn.addEventListener('click', () => timer.start());
 pauseBtn.addEventListener('click', () => timer.pause());
 resetBtn.addEventListener('click', () => timer.reset());
 resetBtn.addEventListener('click', () => {
