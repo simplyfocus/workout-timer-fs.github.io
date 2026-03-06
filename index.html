@@ -26,7 +26,7 @@
 <div class="container">
   <div class="main-col">
     <header class="title-stacked">
-        <img src="skate icon (1).ico" class="header-ico" alt="Skate icon" />
+        <img id="audioUnlockBtn" src="skate icon (1).ico" class="header-ico" alt="Skate icon" />
         <div class="title-with-icon">
             <svg class="app-icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
                 <title>Workout icon</title>
@@ -329,6 +329,13 @@ const list = document.getElementById("workoutList");
 
 // ChatGPT: declare sound
 const alertSound = document.getElementById("alertSound");
+// ChatGPT: unlock audio when user clicks the icon
+document.getElementById("audioUnlockBtn").addEventListener("click", () => {
+    alertSound.play().then(() => {
+        alertSound.pause();
+        alertSound.currentTime = 0;
+    }).catch(() => {});
+});
 
 // persistence for duration presets per exercise (minutes only)
 const presetKey = 'workoutDurations';
@@ -433,14 +440,6 @@ timer.progressFill = timerProgressFill;
 const timerContainer = document.getElementById('timer');
 
 
-/*
-sound = new Audio('workout10sec.mp3');
-if (timer.remaining === 10) {
-    sound.play();
-}
-*/
-
-
 // when timer completes, tick the current exercise if not already done
 let currentCheck = null;
 let currentLi = null;
@@ -456,7 +455,7 @@ startBtn.addEventListener('click', () => {timer.start();
                     alertSound.pause();
                     alertSound.currentTime = 0;
                 }).catch(() => {});
-                
+
 });
 pauseBtn.addEventListener('click', () => timer.pause());
 resetBtn.addEventListener('click', () => timer.reset());
