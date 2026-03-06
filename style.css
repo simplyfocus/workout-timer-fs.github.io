@@ -256,11 +256,14 @@ li.dragging{opacity:0.4;}
         flex-direction:column;
     }
 
-    .main-col{
-        order:1;
-    }
-
     .side-col{
         order:2;
+        width:100%;
+    }
+
+    .main-col{
+        order:1;
+        width:100%;
     }
 }
+
