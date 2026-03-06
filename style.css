@@ -250,3 +250,17 @@ li.dragging{opacity:0.4;}
 
 /* ensure checkbox + label align left inside item */
 .item-left{justify-content:flex-start}
+
+@media (max-width:680px){
+    .container{
+        flex-direction:column;
+    }
+
+    .main-col{
+        order:1;
+    }
+
+    .side-col{
+        order:2;
+    }
+}
