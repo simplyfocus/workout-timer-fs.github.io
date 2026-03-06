@@ -375,13 +375,7 @@ class Timer {
         this.interval = setInterval(() => {
 
 
-            // ChatGPT: unlock audio when user presses start
-            document.getElementById("startBtn").addEventListener("click", () => {
-                alertSound.play().then(() => {
-                    alertSound.pause();
-                    alertSound.currentTime = 0;
-                }).catch(() => {});
-            });
+            
 
 
 
@@ -439,11 +433,13 @@ timer.progressFill = timerProgressFill;
 const timerContainer = document.getElementById('timer');
 
 
-
+/*
 sound = new Audio('workout10sec.mp3');
 if (timer.remaining === 10) {
     sound.play();
 }
+*/
+
 
 // when timer completes, tick the current exercise if not already done
 let currentCheck = null;
@@ -454,7 +450,14 @@ timer.onFinish = () => {
     }
 };
 
-startBtn.addEventListener('click', () => timer.start());
+startBtn.addEventListener('click', () => {timer.start();
+    // ChatGPT: unlock audio when user presses start
+                alertSound.play().then(() => {
+                    alertSound.pause();
+                    alertSound.currentTime = 0;
+                }).catch(() => {});
+                
+});
 pauseBtn.addEventListener('click', () => timer.pause());
 resetBtn.addEventListener('click', () => timer.reset());
 resetBtn.addEventListener('click', () => {
