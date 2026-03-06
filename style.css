@@ -251,7 +251,7 @@ li.dragging{opacity:0.4;}
 /* ensure checkbox + label align left inside item */
 .item-left{justify-content:flex-start}
 
-@media (max-width:680px){
+@media (min-width:320px){
     .container{
         flex-direction:column;
     }
@@ -266,4 +266,5 @@ li.dragging{opacity:0.4;}
         width:100%;
     }
 }
+
 
