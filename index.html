@@ -17,6 +17,12 @@
 </head>
 <body>
 
+
+
+<audio id="alertSound" src="workout10sec.mp3" preload="auto"></audio>
+
+
+
 <div class="container">
   <div class="main-col">
     <header class="title-stacked">
@@ -321,6 +327,9 @@ document.getElementById("dayName").textContent = dayNames[todayWD];
 
 const list = document.getElementById("workoutList");
 
+// ChatGPT: declare sound
+const alertSound = document.getElementById("alertSound");
+
 // persistence for duration presets per exercise (minutes only)
 const presetKey = 'workoutDurations';
 function loadPresets(){
@@ -365,11 +374,19 @@ class Timer {
         if (this.interval) return;
         this.interval = setInterval(() => {
 
+
+            // ChatGPT: unlock audio when user presses start
+            document.getElementById("startBtn").addEventListener("click", () => {
+                alertSound.play().then(() => {
+                    alertSound.pause();
+                    alertSound.currentTime = 0;
+                }).catch(() => {});
+            });
+
+
+
             if (this.remaining === 11) {
-                // play sound at 10 seconds remaining
-                if (typeof sound !== 'undefined') {
-                    sound.play();
-                }
+                alertSound.play()
             }
 
 
@@ -424,7 +441,7 @@ const timerContainer = document.getElementById('timer');
 
 
 sound = new Audio('workout10sec.mp3');
-if (timer.remaining === 11) {
+if (timer.remaining === 10) {
     sound.play();
 }
 
