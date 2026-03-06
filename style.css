@@ -379,22 +379,23 @@ li.dragging{opacity:0.4;}
 }
 
 /* Mobile adjustments */
-
 @media (max-width:820px){
 
     .container{
         flex-direction:column;
         gap:20px;
     }
-
-    .side-col{
-        order:-1;
-        justify-content:center;
+    .main-col{
+        order:1;
+        width:100%;
     }
-
-    .main-col,
     .side-col{
-        flex:1 1 100%;
+        order:2;
+        width:100%;
+        justify-content:stretch;
+    }
+    ul{
+        width:100%;
     }
 }
 
@@ -448,3 +449,4 @@ li.dragging{opacity:0.4;}
         width:50px;
     }
 }
+
