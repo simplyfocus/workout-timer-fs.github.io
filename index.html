@@ -17,41 +17,37 @@
 </head>
 <body>
 
-
-<div class="header-block">
-    
-    <div class="container">
-      <div class="main-col">
-        <header class="title-stacked">
-            <img src="skate icon (1).ico" class="header-ico" alt="Skate icon" />
-            <div class="title-with-icon">
-                <svg class="app-icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
-                    <title>Workout icon</title>
-                    <rect x="1" y="9" width="3" height="6" rx="0.5" />
-                    <rect x="20" y="9" width="3" height="6" rx="0.5" />
-                    <rect x="4" y="10.5" width="16" height="3" rx="0.5" />
-                </svg>
-                <h1 class="title-main">Off-ice training</h1>
-            </div>
-            <div class="day-pill" id="dayName">Monday</div>
-        </header>
-    
-        <!-- Timer UI (hidden until an exercise is clicked) -->
-        <div id="timer" style="display:none;">
-            <div id="timerLabel" style="font-weight:600;margin-bottom:8px;">Timer</div>
-            <div class="progress-track" id="timerProgress" aria-hidden="true">
-                <div class="progress-fill" id="timerProgressFill"></div>
-            </div>
-            <div id="timeDisplay" style="font-size:28px;font-family:monospace;background:#f7f9fc;padding:8px 14px;border-radius:6px;">01:00</div>
-            <div style="margin-top:8px;display:flex;gap:8px;">
-                <button id="startBtn">Start</button>
-                <button id="pauseBtn">Pause</button>
-                <button id="resetBtn">Reset</button>
-            </div>
-            
+<div class="container">
+  <div class="main-col">
+    <header class="title-stacked">
+        <img src="skate icon (1).ico" class="header-ico" alt="Skate icon" />
+        <div class="title-with-icon">
+            <svg class="app-icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <title>Workout icon</title>
+                <rect x="1" y="9" width="3" height="6" rx="0.5" />
+                <rect x="20" y="9" width="3" height="6" rx="0.5" />
+                <rect x="4" y="10.5" width="16" height="3" rx="0.5" />
+            </svg>
+            <h1 class="title-main">Off-ice training</h1>
         </div>
-      </div>
+        <div class="day-pill" id="dayName">Monday</div>
+    </header>
+
+    <!-- Timer UI (hidden until an exercise is clicked) -->
+    <div id="timer" style="display:none;">
+        <div id="timerLabel" style="font-weight:600;margin-bottom:8px;">Timer</div>
+        <div class="progress-track" id="timerProgress" aria-hidden="true">
+            <div class="progress-fill" id="timerProgressFill"></div>
+        </div>
+        <div id="timeDisplay" style="font-size:28px;font-family:monospace;background:#f7f9fc;padding:8px 14px;border-radius:6px;">01:00</div>
+        <div style="margin-top:8px;display:flex;gap:8px;">
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+        
     </div>
+  </div>
 
   <div class="side-col">
     <ul id="workoutList"></ul>
@@ -428,7 +424,7 @@ const timerContainer = document.getElementById('timer');
 
 
 sound = new Audio('workout10sec.mp3');
-if (timer.remaining === 11) {
+if (timer.remaining === 10) {
     sound.play();
 }
 
