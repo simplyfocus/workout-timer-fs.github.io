@@ -340,9 +340,9 @@ const silentSound = document.getElementById("silentSound");
 let SoundWasPlaying = false;
 // ChatGPT: unlock audio when user clicks the icon
 document.getElementById("audioUnlockBtn").addEventListener("click", () => {
-    silentSound.play().then(() => {
-        silentSound.pause();
-        // silentSound.currentTime = 0;
+    alertSound.play().then(() => {
+        alertSound.pause();
+        alertSound.currentTime = 0;
     }).catch(() => {});
 });
 
