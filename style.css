@@ -38,7 +38,12 @@
 }
 
 /* Page layout */
-html,body{height:100%;}
+html,body{height:100%;
+    
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 /*Chat GPT*/
 html{
@@ -47,6 +52,7 @@ html{
     background: linear-gradient(180deg,var(--bg),var(--gradbttm));
     background-attachment:fixed;
     min-height:100%;
+    overflow-x: hidden;
 }
 body{
     margin:0;
@@ -420,4 +426,11 @@ body{
     position:relative;
     overscroll-behavior: none;
     background: transparent;
+}
+
+
+
+
+* {
+    outline: 1px solid red;
 }
