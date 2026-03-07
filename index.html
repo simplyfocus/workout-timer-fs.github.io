@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="skate icon (1).ico">
     <link rel="icon" type="image/png" sizes="512x512" href="skate icon (1).ico">
     <meta name="apple-mobile-web-app-capable" content="yes">
+
     <!-- use Google Poppins for headers -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,12 +20,14 @@
         body { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; padding: 20px; }
         li { margin-bottom: 6px; }
     </style>
+
+    <audio id="alertSound" src="workout10sec.mp3" preload="auto"></audio>
+    <audio id="silentSound" src="unlock2sec.mp3" preload="auto"></audio>
 </head>
 <body>
 
 
 
-<audio id="alertSound" src="workout10sec.mp3" preload="auto"></audio>
 
 
 
@@ -333,12 +336,13 @@ const list = document.getElementById("workoutList");
 
 // ChatGPT: declare sound
 const alertSound = document.getElementById("alertSound");
+const silentSound = document.getElementById("silentSound");
 let SoundWasPlaying = false;
 // ChatGPT: unlock audio when user clicks the icon
 document.getElementById("audioUnlockBtn").addEventListener("click", () => {
-    alertSound.play().then(() => {
-        alertSound.pause();
-        alertSound.currentTime = 0;
+    silentSound.play().then(() => {
+        silentSound.pause();
+        // silentSound.currentTime = 0;
     }).catch(() => {});
 });
 
