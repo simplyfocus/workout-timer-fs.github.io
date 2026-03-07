@@ -47,14 +47,15 @@ html,body{height:100%;
 
 /*Chat GPT*/
 html{
-    background:transparent;
+    /* background:transparent; */
     scroll-behavior:smooth;
-    background:linear-gradient(
+    /* background:linear-gradient(
         180deg,
         var(--bg) 0%,
         var(--gradbttm) 70%,
         var(--gradbttm) 100%
-    );
+    );*/
+    /* background: #22c55e;*/
     background-attachment:fixed;
     min-height:100%;
     overflow-x: hidden;
@@ -439,17 +440,7 @@ html, body {
 body{
     max-width:100vw;
     position:relative;
-    overscroll-behavior: none;
+    /* overscroll-behavior: none;*/ 
     background: transparent;
 }
-
-
-
-
-* {
-    outline: 1px solid purple;
-}
-
-
-
 
