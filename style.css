@@ -49,7 +49,12 @@ html,body{height:100%;
 html{
     background:transparent;
     scroll-behavior:smooth;
-    background: linear-gradient(180deg,var(--bg),var(--gradbttm));
+    background:linear-gradient(
+        180deg,
+        var(--bg) 0%,
+        var(--gradbttm) 70%,
+        var(--gradbttm) 100%
+    );
     background-attachment:fixed;
     min-height:100%;
     overflow-x: hidden;
@@ -444,6 +449,7 @@ body{
 * {
     outline: 1px solid purple;
 }
+
 
 
 
