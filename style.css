@@ -42,7 +42,7 @@ html,body{height:100%;
     
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 /*Chat GPT*/
@@ -59,7 +59,8 @@ body::before{
     content:"";
     position:fixed;
     inset:0;
-    background: linear-gradient(180deg,var(--bg),var(--gradbttm));
+    /*background: linear-gradient(180deg,var(--bg),var(--gradbttm));*/
+    
     z-index:-1;
 }
 body{
@@ -443,4 +444,5 @@ body{
 * {
     outline: 1px solid purple;
 }
+
 
