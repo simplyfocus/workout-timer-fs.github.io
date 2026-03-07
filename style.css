@@ -130,7 +130,10 @@ h2{
     /* CHAT GPT */
     position:sticky;
     top:12px;
-    z-index:10;
+    z-index:100;
+
+    box-shadow:0 12px 30px rgba(0,0,0,0.35);
+    backdrop-filter: blur(6px);
 
 }
 
@@ -272,8 +275,7 @@ li.dragging{opacity:0.4;}
 /* ensure checkbox + label align left inside item */
 .item-left{justify-content:flex-start}
 
-
-@media (orientation: portrait){
+@media (orientation: portrait) {
 
     .container{
         grid-template-columns: 1fr;
@@ -311,6 +313,66 @@ li.dragging{opacity:0.4;}
         max-height:70vh;
         overflow-y:auto;
     }
+
+    /* NEW */
+    .container{
+        width:100%;
+        padding:20px;
+        border-radius:0;
+    }
+
+    body{
+        padding:10px;
+    }
+
+    .title-main{
+        font-size:34px;
+    }
+
+    .day-pill{
+        font-size:16px;
+        padding:8px 16px;
+    }
+
+    .header-ico{
+        width:70px;
+        height:70px;
+    }
+
+    li{
+        padding:18px 20px;
+        border-radius:16px;
+        font-size:18px;
+    }
+
+    .exercise-label{
+        font-size:18px;
+    }
+
+    .time-input{
+        width:70px;
+        height:36px;
+        font-size:18px;
+    }
+
+    .drag-handle{
+        font-size:24px;
+        padding:6px;
+    }
+
+    ul{
+        gap:14px;
+    }
+
+    #timeDisplay{
+        font-size:32px;
+    }
+
+    #timerLabel{
+        font-size:20px;
+    }
+    /* END NEW */
+    
 
     /* VS suggestion */
     /* hide scrollbar but still allow scrolling on mobile */
