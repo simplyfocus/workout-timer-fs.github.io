@@ -273,7 +273,7 @@ li.dragging{opacity:0.4;}
 .item-left{justify-content:flex-start}
 
 
-@media (max-width:600px){
+@media (max-width:700px){
 
     .container{
         grid-template-columns: 1fr;
@@ -319,5 +319,6 @@ li.dragging{opacity:0.4;}
     }   
 
 }
+
 
 
