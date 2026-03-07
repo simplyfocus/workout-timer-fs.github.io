@@ -44,7 +44,9 @@ html,body{height:100%;}
 html{
     background:transparent;
     scroll-behavior:smooth;
-    background: linear-gradient(180deg,var(--bg),var(--gradbttm))
+    background: linear-gradient(180deg,var(--bg),var(--gradbttm));
+    background-attachment:fixed;
+    min-height:100%;
 }
 body{
     margin:0;
