@@ -402,6 +402,7 @@ li.dragging{opacity:0.4;}
 
 html, body {
     overflow-x: hidden;
+    max-width:100vw;
 }
 
 *,
