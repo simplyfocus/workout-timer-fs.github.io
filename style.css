@@ -16,7 +16,7 @@
     --barpurple:#8b5cf6;
 }
 
-/*  Dark mode overrides using media query */
+/* Dark mode overrides using media query */
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #202547;
@@ -47,15 +47,7 @@ html,body{height:100%;
 
 /*Chat GPT*/
 html{
-    /* background:transparent; */
     scroll-behavior:smooth;
-    /* background:linear-gradient(
-        180deg,
-        var(--bg) 0%,
-        var(--gradbttm) 70%,
-        var(--gradbttm) 100%
-    );*/
-    /* background: #22c55e;*/
     background-attachment:fixed;
     min-height:100%;
     overflow-x: hidden;
@@ -401,7 +393,6 @@ li.dragging{opacity:0.4;}
     }
     /* END NEW */
     
-
     /* VS suggestion */
     /* hide scrollbar but still allow scrolling on mobile */
     .side-col::-webkit-scrollbar{
@@ -450,6 +441,7 @@ body{
     .title-main{
         font-size: clamp(28px,6vw,36px);
     }
+    
     body{
         font-size: 20vw;
     }
@@ -467,7 +459,6 @@ body{
     .container{
         width:100%;
         max-width:none;
-        border-radius:0;
         padding:16px 12px;
     }
     /* *{outline: solid red} */
