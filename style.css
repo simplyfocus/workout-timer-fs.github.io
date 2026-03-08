@@ -265,7 +265,7 @@ li.done .exercise-label{text-decoration:line-through}
 
 li.dragging{opacity:0.4;}
 
-.exercise-label{font-weight:600;font-family:'Poppins', 'Roboto', sans-serif}
+.exercise-label{font-size:max(10px, min(2vw,20px)) ;font-weight:600;font-family:'Poppins', 'Roboto', sans-serif}
 
 /* current (active) item while timer is running */
 .current{background:var(--primary);color:#fff;box-shadow:0 12px 30px rgba(37,99,235,0.12)}
@@ -470,4 +470,5 @@ body{
 
   
   
+
 
