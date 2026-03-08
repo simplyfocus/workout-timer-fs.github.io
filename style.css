@@ -462,9 +462,10 @@ body{
     .container{
         width: 95%;
     }
-    *{outline: solid red}
+    /* *{outline: solid red} */
 }
 
 #timer{
     font-size: min(1vw, 10rem);
   }
+
