@@ -445,7 +445,7 @@ body{
 }
 
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
 
     body{
         font-size: 1.2rem;
@@ -467,4 +467,5 @@ body{
 #timer{
     font-size: min(12vw, 4rem);
   }
+
 
