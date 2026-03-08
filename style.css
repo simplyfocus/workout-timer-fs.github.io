@@ -447,6 +447,9 @@ body{
 
 @media (orientation: portrait) {
 
+    .title-main{
+        font-size: clamp(28px,6vw,36px);
+    }
     body{
         font-size: 20vw;
     }
@@ -456,16 +459,24 @@ body{
     }
     
     li{
-        font-size: 50vw;
+        font-size: 1.05rem;
         padding: 14px 18px;
+        width: 100%;
+        border-radius: 16px;
     }
     .container{
-        width: 95%;
+        width:100%;
+        max-width:none;
+        border-radius:0;
+        padding:16px 12px;
     }
     /* *{outline: solid red} */
 }
 
 #timer{
-    font-size: min(1vw, 10rem);
+    font-size: min(8vw, 32px);
   }
+
+  
+  
 
